@@ -1,0 +1,825 @@
+@red: #df2121;
+@dark-red: darken(@red, 20%);
+@slate: #9a9e8f;
+@dark-slate: darken(@slate, 20%);
+@gray: #ddd;
+@white: #fff;
+@info-blue: #49AFCD;
+@dark-info-blue: darken(@info-blue, 20%);
+
+@big: 21px;
+@med: 15px;
+@sml: 9px;
+
+@span: 60px;
+
+@text-font: "PT Serif", Georgia, serif;
+@ui-font: "PT Sans", Verdana, Tahoma, sans-serif;
+
+.red{
+	color: @red;
+}
+
+.dk-red{
+	color: @dark-red;
+}
+
+.slate{
+	color: @slate;
+}
+
+.dk-slate{
+	color: @dark-slate;
+}
+
+a {
+	color: @dark-red;
+}
+
+.box-shadow (@x: 1px, @y: 1px, @bl: 3px, @cl: #ccc){
+    box-shadow: @x @y @bl @cl;
+    -moz-box-shadow: @x @y @bl @cl;
+    -webkit-box-shadow: @x @y @bl @cl;
+}
+
+.small { font-size: 10px; }
+
+.txt-shadow{
+	text-shadow: @slate;
+}
+
+.curvy-box (@r: 5px){
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+}
+
+.no-gutter{
+	margin-left: 0;
+}
+
+.logo img{
+    width: 320px;
+}
+
+h2.bottom-space{
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&.subheader{
+		margin-bottom: 10px;
+	}
+}
+
+.shadow, .shadow-box{
+		.curvy-box;
+		.box-shadow;
+}
+
+
+.test(){}
+
+div.login_matisse{
+    height: auto;
+    width: auto;
+    margin: 0px;
+    margin-left: 10px;
+    
+    .curvy-box
+    .box-shadow
+    
+    form div.input{
+        display: inline-block;
+        width: inherit;
+        height: inherit;
+        float: none !important;
+        background: #fff !important;
+    }
+    
+    button{
+        display: inline-block;
+    }
+}
+
+div.from_matisse, body.iframed div.from_matisse{
+
+    color: @dark-slate;
+
+	span.red {
+		color: @red;
+	}
+	
+	a {
+		border: 0;
+	}
+		
+    fieldset{
+        padding-top: 20px;
+    }
+    
+    legend{
+        color: @slate;
+        font-size: @med;
+        padding-left: 0 !important;
+    }
+    
+    form div.input{
+        width: 360px;
+        margin: 0 0 10px 0;
+        float: none !important;
+        background: #fff !important;
+        
+        .box-shadow(1px, 1px, 3px, @gray);
+        .curvy-box
+
+        label{
+            color: @slate;
+            font-size: @med;
+			display: inline-block;
+			margin-right: 10px;
+        }
+        
+        /*input, textarea, select{
+            margin-left: 10px;
+        }*/
+		
+		select{
+			background-color: @white;
+		}
+		
+		input[type="checkbox"] {
+			margin: 0 10px 0 0px;
+		}
+		
+		input[type="text"], input[type="number"]{
+			height: 35px !important;
+		}
+		
+		span.add-on{
+			line-height: 25px;
+			height: 25px !important;
+			position: relative;
+			top: -5px;
+		}
+    }
+    
+    div.error-message{
+        color: @red;
+        margin-top: 5px;
+		width: 210px;
+    }
+	
+	input.micro, .input-micro{
+		width: 30px;
+	}
+	
+	div.micro-inputs label{
+		width: 130px;
+		margin-left: 0px;
+		float: none;
+	}
+	
+	div.dimension-container{
+		position: relative;
+		left: 125px;
+		top: -20px;
+		
+		label{
+			margin-bottom: 5px;
+			width: 15px;
+			margin: 0 1px 0 5px;
+		}
+
+	}
+	
+	ul {
+		list-style: none inside;
+	}
+	
+	ul.profile{
+		margin-top: 10px;
+	}
+	
+	a.register_button{
+		padding: 5px 05px 0;
+		margin-bottom: 10px;
+	}
+	
+	div.artwork_actions{
+		a{
+			margin-bottom: 10px;
+		}
+	}
+	
+	div.artworks.view{
+		
+		div.view_actions{
+			margin-left: 0;
+		}
+		
+		a.view_escape{
+			margin-bottom: 10px;
+			margin-left: -6px;
+		}
+		
+		img.sash{
+			position: relative;
+			left: 18px;
+			top: -2px;
+		}
+	}
+}
+
+body.iframed div.from_matisse{
+	
+	p.submission_count{
+		.curvy-box;
+		.box-shadow(1px, 1px, 3px, @dark-red);
+		padding: 10px;
+		font-size: 15px;
+		color: @dark-slate;
+		text-align: center;
+	
+		.remaining{
+			text-shadow: @slate;
+		}
+	}
+	
+	div.flash.flash-success{
+		color: green;
+		background-color: lighten(green, 40%);
+		border: 1px solid green;
+		padding: 10px;
+		.curvy-box;
+		margin-bottom: 10px;
+	}
+	
+	div.flash.flash-failure{
+		color: @red;
+		background-color: lighten(@red, 40%);
+		border: 1px solid @red;
+		padding: 10px;
+		.curvy-box;
+		margin-bottom: 10px;
+	}
+	
+	div.artworks.no_remaining{
+		font-size: 22px;
+		color: @dark-slate;
+	}
+	
+}
+
+body.iframed div.from_matisse form {
+	label {
+		display: inline-block;
+		width: 130px;
+	}
+	span.add-on{
+		position: relative;
+		top: -4px;
+	}
+}
+
+form.artwork_submission{
+	div.input-prepend{
+		input{
+			height: 35px !important;
+			line-height: 35px !important;
+		}
+	}
+}
+
+div.mainshell {
+    
+    p {
+        color: @slate;
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 25px;
+        text-align: justify;
+    }
+
+    p.subhead{
+        font-size: 25px !important;
+        font-variant: small-caps !important;
+    }
+
+	div.front-page-column {
+		ul{
+			li{
+				color: @dark-red;
+			}
+		}
+	}
+
+    div.front-page-list{
+    	.box-shadow;
+        .curvy-box;
+        background-color:@white;
+		border: 2px solid @red;
+        color: darken(@slate, 20%);
+        text-shadow: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        ul{
+            position: relative;
+            left: 20px;
+            list-style-type: none;
+            list-style-image: none;
+            list-style: none;
+            list-style-position: inside;
+            
+            li{
+                font-size: @big;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: @dark-slate;
+            }	
+        }
+    }
+
+    div.front-page-column{
+		margin-top: 0px;
+        font-size: 15px;
+		color: @dark-slate;
+    }
+	
+	div.wordpress_content{
+		p {
+			font-size: 16px;
+			color: @dark-slate;
+			margin-bottom: 10px;
+		}
+	}
+	
+	ul{
+	position: relative;
+	left: 20px;
+	list-style-type: circle;
+	list-style-image: none;
+	list-style: none;
+	list-style-position: outside;
+	
+		li{
+			font-size: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			color: @slate;
+		}	
+	}	
+}
+
+div.client-landing-page, div.artist-landing-page{
+	
+	strong {
+		color: @dark-slate;
+	}
+	
+	ul {
+		list-style-position: outside;
+		list-style-type: circle;
+		
+		li {
+			color: @slate;
+			line-height: 20px;
+		}
+	}
+	ul.client-page-bullets{
+		li {
+			color: @dark-red;
+			margin-bottom: 7px;
+		}
+	}
+}
+
+div.box-shadow{
+    .box-shadow
+}
+
+.sf-menu a {
+	&:hover{
+		color: @dark-red;
+		font-size: 16px;
+	    font-variant: normal;
+		text-decoration: underline;
+	}
+	
+    font-size: 16px;
+    font-variant: normal;
+	color: @dark-slate;
+	
+}
+
+li#menu-item-128 a{
+	font-size: 14px;
+	top: 2px;
+	&.logged{
+		font-size: 14px;
+	}
+}
+
+div.cart_display{
+	float: right;
+	margin-right: 0px;
+	position: relative;
+	top: 38px;
+	left: -32px;
+	width: 200px;
+	
+	a.cart_display{
+		color: white;
+		width: 60px;
+		
+		span{
+			position: relative;
+			top: -2px;
+			font-size: 18px;
+			padding-left: 10px;
+			text-shadow: none;
+		}
+	}
+	
+	a.search-button{
+		margin-right: 10px;
+	}
+}
+
+div.submission-rules{
+    .box-shadow(2px, 2px, 3px, #888);
+}
+
+ul.submission-guide{
+    list-style-type: circle;
+    list-style-position: inside;
+    padding: 15px 0 15px 0;
+    font-size: 13px;
+    background-color: #efefef;
+
+    li{
+        display: block;
+        position: relative;
+        left: @span * 0.5;
+        clear: right;
+        margin: 7px 0 7px 0;
+        list-style-type: circle;
+        width: @span * 5;
+        color: darken(@slate, 10%);
+    }
+}
+
+div.users.view, div.artists, div.clients, div.client.locations{
+    
+    ul.profile{
+        list-style: none;
+        list-style-position: inside;
+		margin-bottom: 10px;
+        margin-left: 0px;
+        li{
+			line-height: 24px;
+            font-size: 18px;
+			margin-bottom: 5px;
+        }
+    }
+	
+	.shadow, .shadow-box{
+		.curvy-box;
+		.box-shadow;
+	}
+	
+	.location.action_list {
+		padding-top: 15px;
+	}
+	
+	.location.button_list{
+		padding-top: 10px;
+		margin-left: -20px;
+		
+		a {
+			margin-bottom: 10px;
+		}
+	}
+	
+	span.location_label{
+		color: @dark-slate;
+	}
+	
+	div.artwork.artist_related{
+		margin-bottom: 10px;
+	}
+	
+	a.artist_index_link{
+		color: @dark-red;
+		font-size: 16px;
+		padding: 3px 0 3px 0;
+	}
+	
+	div.artist_list{
+		ul {
+			li{
+				.curvy-box();
+				.box-shadow();
+				padding: 10px 0 10px 20px;
+				margin: 0px 0 15px 0;
+				
+				&:hover{
+					.box-shadow(1px, 1px, 2px, @dark-red);
+					a{
+						color: @dark-red;
+					}
+				}
+			}
+		}
+	}
+	
+	p.profile_bio{
+		font-size: 14px;
+	}
+}
+
+a.btn.link_matisse{
+	margin-bottom: 10px;
+}
+
+div.maincontent{
+	
+	p.form-sidebar{
+		color: @red;
+		font-size: 18px;
+		line-height: 25px;
+		text-shadow: @slate;
+	}
+	
+	p.terms{
+		padding: 5px 0 5px 16px;
+		color: @dark-red;
+		width: 370px;
+	}
+	
+	div.oops_buttons a{
+		margin-bottom: 10px;
+	}
+	
+}
+
+div.artwork.gallery.default {
+	text-align: center;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	.curvy-box;
+	.box-shadow;
+	
+	img.sash{
+		position: relative;
+		left: -52px;
+		margin-bottom: -118px;
+	}
+	
+	img.gallery_image{
+		margin: 0 40px 10px 40px;
+	}
+	
+	p.gallery_artist_name{
+		color: @dark-red;
+		text-align: left;
+		font-size: 16px;
+		padding: 10px 0 0 0;
+		margin-left: 24px;
+	}
+	
+	div.gallery_actions{
+		margin: 10px 15px 10px 15px;
+		
+		a.btn.link_matisse, a.btn.cart_matisse{
+			width: 55px;
+			margin-left: 5px;
+			margin-right: 5px;
+			height: auto;
+		}
+	}
+}
+
+div.gallery.controls{
+	text-align: center;
+	font-size: 15px;
+	
+	p{
+		visibility: hidden;
+	}
+	
+	div.paging{
+		color: @dark-slate;
+		
+		span{
+			padding: 0 3px 0 3px;
+		}
+		
+		a{
+			color: @dark-red;
+			&:visited{
+				color: @dark-slate;
+			}
+			&:hover{
+				color: slate;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+div.slidershell.featured{
+
+}
+
+div.artworks.featured{
+
+	padding-top: 20px;
+	padding-left: 20px;
+	
+	div.row{
+		height: 320px;
+	}
+	
+	div.artwork.featured{
+		width: 30%;
+		display: inline-block;
+		margin: 0 0 0 2%;
+	
+		img{
+			position: relative;
+			left: 20px;
+		}
+		
+		p {
+			color: @dark-red;
+			text-align: center;
+			font-size: 16px;
+			margin-top: 5px;
+			clear: both;
+			padding-top:10px;
+		}
+		
+		a.cart_matisse{
+			position: relative;
+			bottom: 0px;
+			left: 5px;
+		}
+	}
+}
+
+div.view_container{
+	position: relative;
+	left: 20px;
+	color: @dark-slate;
+	
+
+	hgroup{
+		margin-bottom: 10px;
+	}
+	
+	ul.purchase_buttons{
+		position: relative;
+		left: -40px;
+		
+		li{
+			clear: right;
+			width: 100%;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+div.clients.view{
+	div.location_info{
+		margin-bottom: 10px;
+	}
+}
+
+div.item_row{
+	padding: 14px 0 12px 10px;
+	
+	div.item_title{
+		font-size: 18px;
+	}
+	
+	div.order.preview.actions{
+		a {
+			float: right;
+		}
+	}
+	
+	div.item_amount{
+		text-align: right;
+	}
+	
+	div.item_amount, div.item_type{
+		position: relative;
+		top: 3px;
+	}
+	
+	a.item_remove{
+		position: relative;
+		font-size: 10px;
+	}
+}
+
+div.row.totals{
+	div.total_amount, div.total_taxes{
+		text-align: right;
+	}
+	div.total{
+		padding: 10px 0 0 0;
+	}
+}
+
+div#home-blog-feed{
+	h4{
+		font-size: 18px;
+		margin-bottom: 20px;
+		color: @dark-red;
+		text-align: left;
+	}
+	
+	h5 {
+		font-size: 16px;
+		color: @dark-red;
+		text-align: right;
+	}
+	
+	a{
+		color: @dark-red;
+	}
+	
+	p{
+		font-size: 14px !important;
+		font-family: "PT Serif", serif !important;
+		line-height: 20px;
+		margin-bottom: 10px;
+		text-align: left;
+	}
+	
+	div.post-author{
+		font-size: 14px;
+		color: @slate;
+		margin-bottom: 10px;
+		text-align: right;
+	}
+}
+
+/* Footer widget CSS */
+div#recent-posts-3{
+	ul {
+		list-style: none inside;
+		li {
+			
+		}
+	}
+}
+
+div#text-2{
+	padding: 0;
+}
+
+form.matisse-search{
+	background: transparent;
+	position: relative;
+	top: -28px;
+	left: -30px;
+	width: 360px;
+	float: right;
+	
+	label {
+		display: none;
+	}
+	
+}
+
+div.artworks.search{
+	form{
+		padding: 10px 0 10px 10px;
+		margin-left: 10px;
+	}
+	
+	span.search_price_to{
+		display: inline-block;
+		margin: 0 5px 0 5px;
+	}
+	
+	span.price_form_label{
+		display: block;
+		margin-bottom: 3px;
+		color: #333;
+	}
+	
+	input.price_button{
+		margin-top: 10px;
+	}
+	
+	label[for="ArtworkLowPrice"], label[for="ArtworkHighPrice"]{
+		margin-right: 5px;
+		font-size: 17px;
+	}
+	
+}

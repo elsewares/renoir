@@ -1,0 +1,3 @@
+[submodule "app/Plugin/Uploader"]
+	path = app/Plugin/Uploader
+	url = git@github.com:elsewares/cake-uploader

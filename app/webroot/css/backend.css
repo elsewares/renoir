@@ -1,0 +1,21 @@
+/* 
+    Document   : backend
+    Created on : Feb 1, 2012, 11:23:01 AM
+    Author     : beh
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html { 
+    font-family: 'PT Sans', sans-serif;
+}
+
+div.content{
+    margin-top: 60px;
+}
+
+div.input.text{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
